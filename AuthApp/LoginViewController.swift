@@ -11,11 +11,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
     @IBOutlet var loginButton: UIButton!
-    
-    @IBOutlet var forgotUsernameButton: UIButton!
-    @IBOutlet var forgotPasswordBotton: UIButton!
     
     private let username = "user"
     private let password = "password"
@@ -31,11 +27,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.username = usernameTF.text ?? ""
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        isFormValid()
+        welcomeVC.username = usernameTF.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,11 +36,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotButtonTouched(_ sender: UIButton) {
-        if sender == forgotUsernameButton {
+        if sender.tag == 0 {
             showAlert(message: "Your username is \"\(username)\"")
         } else {
             showAlert(message: "Your password is \"\(password)\"")
         }
+    }
+    
+    @IBAction func loginButtonPressed() {
+        if usernameTF.text != username || passwordTF.text != password {
+            showAlert(message: "Wrong username or password")
+            passwordTF.text = ""
+        }
+        
+        performSegue(withIdentifier: "login", sender: nil)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -57,15 +58,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == self.usernameTF {
-            self.passwordTF.becomeFirstResponder()
-            return false
-        } else if isFormValid() {
-            performSegue(withIdentifier: "login", sender: loginButton)
-            return true
+        if textField == usernameTF {
+            passwordTF.becomeFirstResponder()
         } else {
-            return false
+            loginButtonPressed()
         }
+        
+        return true
     }
     
     private func showAlert(message: String) {
@@ -74,16 +73,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    private func isFormValid() -> Bool {
-        let isValid = usernameTF.text == username && passwordTF.text == password
-        
-        if !isValid {
-            showAlert(message: "Wrong username or password")
-        }
-        
-        return isValid
-    }
-    
 }
 

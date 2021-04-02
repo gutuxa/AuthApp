@@ -42,6 +42,7 @@
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
                                         <connections>
+                                            <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtH-Ra-K5D"/>
                                             <segue destination="GTI-IQ-I09" kind="showDetail" identifier="login" id="G1I-cT-zma"/>
                                         </connections>
                                     </button>
@@ -55,7 +56,7 @@
                                                     <action selector="forgotButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOJ-3m-a7m"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Hl-DBO">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Hl-DBO">
                                                 <rect key="frame" x="180" y="0.0" width="115" height="30"/>
                                                 <state key="normal" title="Forgot password"/>
                                                 <connections>
@@ -77,8 +78,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgotPasswordBotton" destination="mqd-Hl-DBO" id="Jxx-F5-DXu"/>
-                        <outlet property="forgotUsernameButton" destination="SLW-Lg-u6V" id="gr9-om-0b4"/>
                         <outlet property="loginButton" destination="zFV-97-TIS" id="Kpe-Db-qST"/>
                         <outlet property="passwordTF" destination="95r-MO-M9K" id="Y7C-QP-urt"/>
                         <outlet property="usernameTF" destination="arD-Pi-eRq" id="gnQ-uC-VV1"/>
