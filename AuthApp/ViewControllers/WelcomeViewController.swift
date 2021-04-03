@@ -12,15 +12,15 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var greatingLabel: UILabel!
     @IBOutlet var logoutButton: UIButton!
     
-    var username: String?
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         logoutButton.layer.cornerRadius = 5
         
-        if let username = username {
-            greatingLabel.text = "Hello, \(username)! 👋"
+        if let person = person {
+            greatingLabel.text = "Hello, \n\(person.firstName) \(person.lastName)! 👋"
         }
     }
 }

@@ -14,6 +14,10 @@
 		B3161B0D26134EB40076EF13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3161B0C26134EB40076EF13 /* Assets.xcassets */; };
 		B3161B1026134EB40076EF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3161B0E26134EB40076EF13 /* LaunchScreen.storyboard */; };
 		B3161B1D2613A1CF0076EF13 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3161B1C2613A1CF0076EF13 /* WelcomeViewController.swift */; };
+		B3161B28261845D20076EF13 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3161B27261845D20076EF13 /* User.swift */; };
+		B3161B2B26189B4B0076EF13 /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3161B2A26189B4B0076EF13 /* WorkViewController.swift */; };
+		B3161B2E2618A4F00076EF13 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3161B2D2618A4F00076EF13 /* JobsViewController.swift */; };
+		B3161B312618AC560076EF13 /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3161B302618AC560076EF13 /* HobbiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		B3161B0F26134EB40076EF13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3161B1126134EB40076EF13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3161B1C2613A1CF0076EF13 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B3161B27261845D20076EF13 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B3161B2A26189B4B0076EF13 /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		B3161B2D2618A4F00076EF13 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		B3161B302618AC560076EF13 /* HobbiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,60 @@
 		B3161B0226134EB30076EF13 /* AuthApp */ = {
 			isa = PBXGroup;
 			children = (
-				B3161B0326134EB30076EF13 /* AppDelegate.swift */,
-				B3161B0526134EB40076EF13 /* SceneDelegate.swift */,
-				B3161B0726134EB40076EF13 /* LoginViewController.swift */,
-				B3161B0926134EB40076EF13 /* Main.storyboard */,
-				B3161B0C26134EB40076EF13 /* Assets.xcassets */,
-				B3161B0E26134EB40076EF13 /* LaunchScreen.storyboard */,
-				B3161B1126134EB40076EF13 /* Info.plist */,
-				B3161B1C2613A1CF0076EF13 /* WelcomeViewController.swift */,
+				B3161B26261845A90076EF13 /* Models */,
+				B3161B23261844D00076EF13 /* Supporting */,
+				B3161B21261844C00076EF13 /* ViewControllers */,
+				B3161B1F261844940076EF13 /* Storyboards */,
+				B3161B20261844B10076EF13 /* Resources */,
 			);
 			path = AuthApp;
+			sourceTree = "<group>";
+		};
+		B3161B1F261844940076EF13 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B3161B0926134EB40076EF13 /* Main.storyboard */,
+				B3161B0E26134EB40076EF13 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B3161B20261844B10076EF13 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3161B0C26134EB40076EF13 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B3161B21261844C00076EF13 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3161B0726134EB40076EF13 /* LoginViewController.swift */,
+				B3161B1C2613A1CF0076EF13 /* WelcomeViewController.swift */,
+				B3161B2A26189B4B0076EF13 /* WorkViewController.swift */,
+				B3161B2D2618A4F00076EF13 /* JobsViewController.swift */,
+				B3161B302618AC560076EF13 /* HobbiesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B3161B23261844D00076EF13 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				B3161B0326134EB30076EF13 /* AppDelegate.swift */,
+				B3161B0526134EB40076EF13 /* SceneDelegate.swift */,
+				B3161B1126134EB40076EF13 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		B3161B26261845A90076EF13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B3161B27261845D20076EF13 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3161B0826134EB40076EF13 /* LoginViewController.swift in Sources */,
+				B3161B312618AC560076EF13 /* HobbiesViewController.swift in Sources */,
 				B3161B1D2613A1CF0076EF13 /* WelcomeViewController.swift in Sources */,
 				B3161B0426134EB30076EF13 /* AppDelegate.swift in Sources */,
+				B3161B2B26189B4B0076EF13 /* WorkViewController.swift in Sources */,
+				B3161B28261845D20076EF13 /* User.swift in Sources */,
+				B3161B2E2618A4F00076EF13 /* JobsViewController.swift in Sources */,
 				B3161B0626134EB40076EF13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6377J3RB9;
-				INFOPLIST_FILE = AuthApp/Info.plist;
+				INFOPLIST_FILE = AuthApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6377J3RB9;
-				INFOPLIST_FILE = AuthApp/Info.plist;
+				INFOPLIST_FILE = AuthApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
