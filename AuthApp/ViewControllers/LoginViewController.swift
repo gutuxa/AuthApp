@@ -9,12 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    // MARK: - IB Otlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var loginButton: UIButton!
     
+    // MARK: - Private properties
     private let user = User.getUser()
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +46,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: - IB Actions
     @IBAction func forgotButtonTouched(_ sender: UIButton) {
         if sender.tag == 0 {
             showAlert(message: "Your username is \"\(user.username)\"")
@@ -66,6 +70,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTF.text = ""
     }
     
+    // MARK: - Private Methods
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
@@ -74,6 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+// MARK: - Keyboard extentions
 extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
