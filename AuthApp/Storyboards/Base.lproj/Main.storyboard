@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="htM-w8-1gb">
-                                <rect key="frame" x="40" y="198" width="240" height="172"/>
+                                <rect key="frame" x="40" y="166.5" width="240" height="171"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eq6-cW-Hd7">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="76"/>
@@ -46,18 +46,22 @@
                                             <segue destination="MMb-Dg-2RT" kind="showDetail" identifier="login" id="G1I-cT-zma"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-TX-ENG">
-                                        <rect key="frame" x="0.0" y="142" width="240" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-TX-ENG">
+                                        <rect key="frame" x="0.0" y="142" width="240" height="29"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLW-Lg-u6V">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
-                                                <state key="normal" title="Forgot username"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLW-Lg-u6V">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Forgot username">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="forgotButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOJ-3m-a7m"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-Hl-DBO">
-                                                <rect key="frame" x="125" y="0.0" width="115" height="30"/>
+                                                <rect key="frame" x="131" y="0.0" width="109" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Forgot password"/>
                                                 <connections>
                                                     <action selector="forgotButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHF-Fq-EBI"/>
@@ -72,7 +76,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="htM-w8-1gb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BHQ-xC-fvg"/>
-                            <constraint firstItem="htM-w8-1gb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HIG-w0-ho5"/>
+                            <constraint firstItem="htM-w8-1gb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-32" id="HIG-w0-ho5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="htM-w8-1gb" secondAttribute="trailing" constant="40" id="Wop-ak-p2y"/>
                             <constraint firstItem="htM-w8-1gb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="xez-p4-VbO"/>
                         </constraints>
@@ -96,9 +100,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="484-eg-6kZ">
-                                <rect key="frame" x="40" y="447" width="240" height="36"/>
+                                <rect key="frame" x="40" y="449" width="240" height="34"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
