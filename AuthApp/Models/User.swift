@@ -8,34 +8,32 @@
 struct User {
     let username: String
     let password: String
+    let person: Person
     
     static func getUser() -> User {
         User(
             username: "user",
-            password: "password"
-        )
-    }
-    
-    func getPerson() -> Person {
-        Person(
-            firstName: "Oksana",
-            lastName: "Tugusheva",
-            skills: "I graduated from university with a degree in software. I started working as a front-end engineer. I have mastered such technologies as html, css, javascript. I try to make user-friendly applications.😉",
-            jobs: [
-                Job(
-                    title: "Banki.ru",
-                    description: "Developed and maintained section «Insurance». Created insurance calculator."
-                ),
-                Job(
-                    title: "Revolut.com",
-                    description: "Created public landing. Developed backoffice application."
-                ),
-                Job(
-                    title: "Currency.com",
-                    description: "Developed media public site and news builder."
-                )
-            ],
-            hobbies: "I like ballet, snow boarding, collect succulents."
+            password: "password",
+            person: Person(
+                firstName: "Oksana",
+                lastName: "Tugusheva",
+                skills: "I graduated from university with a degree in software. I started working as a front-end engineer. I have mastered such technologies as html, css, javascript. I try to make user-friendly applications.😉",
+                jobs: [
+                    Job(
+                        title: "Banki.ru",
+                        description: "Developed and maintained section «Insurance». Created insurance calculator."
+                    ),
+                    Job(
+                        title: "Revolut.com",
+                        description: "Created public landing. Developed backoffice application."
+                    ),
+                    Job(
+                        title: "Currency.com",
+                        description: "Developed media public site and news builder."
+                    )
+                ],
+                hobbies: "I like ballet, snow boarding, collect succulents."
+            )
         )
     }
 }

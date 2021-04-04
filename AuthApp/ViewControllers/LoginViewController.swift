@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    // MARK: - IB Otlets
+    // MARK: - IB Outlets
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var loginButton: UIButton!
@@ -30,17 +30,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
-        
-        let person = user.getPerson()
-        
+                
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.person = person
+                welcomeVC.person = user.person
             } else if let navigationVC = viewController as? UINavigationController {
                 if let workVC = navigationVC.topViewController as? WorkViewController {
-                    workVC.person = person
+                    workVC.person = user.person
                 } else if let hobbiesVC = navigationVC.topViewController as? HobbiesViewController {
-                    hobbiesVC.hobbies = person.hobbies
+                    hobbiesVC.hobbies = user.person.hobbies
                 }
             }
         }
@@ -79,7 +77,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-// MARK: - Keyboard extentions
+// MARK: - Keyboard extention
 extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
